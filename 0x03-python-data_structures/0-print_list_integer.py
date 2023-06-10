@@ -3,3 +3,6 @@
 def print_list_integer(my_list=[]):
     for i in range(len(my_list)):
         print("{0:d}".format(my_list[i]), end='\n')
+
+if __name__ == "__main__":
+    print_list_integer(my_list=[])
