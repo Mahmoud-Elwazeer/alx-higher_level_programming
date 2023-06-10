@@ -9,4 +9,3 @@ def element_at(my_list, idx):
     else:
         return my_list[3]
     return None
-
