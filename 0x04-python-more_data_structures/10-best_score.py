@@ -4,7 +4,7 @@ def best_score(a_dictionary):
     if a_dictionary is None:
         return None
 
-    best = -1
+    best = -999
     for i, j in a_dictionary.items():
         if best < j:
             best = j
