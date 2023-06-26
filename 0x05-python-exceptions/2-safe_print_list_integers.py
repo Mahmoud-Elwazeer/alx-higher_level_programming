@@ -17,6 +17,7 @@ def safe_print_list_integers(my_list=[], x=0):
 
 def safe_print_list_integers(my_list=[], x=0):
     try:
+        my_list[x]
         size = 0
         for i in my_list[:x]:
             if (isinstance(i, int)):
@@ -25,4 +26,4 @@ def safe_print_list_integers(my_list=[], x=0):
         print()
         return (size)
     except IndexError as err:
-        print("list index out of range", err)
+        print(err)
