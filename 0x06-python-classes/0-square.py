@@ -3,6 +3,8 @@
 """
     Define Square
 """
+
+
 class Square:
     """
     Empty Class
