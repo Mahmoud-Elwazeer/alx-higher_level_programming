@@ -1,8 +1,6 @@
 #!/usr/bin/pyhton3
 
-"""
-    Define Square
-"""
+"""Define Square"""
 
 class Square:
     """
