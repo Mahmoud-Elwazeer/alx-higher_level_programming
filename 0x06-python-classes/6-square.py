@@ -92,8 +92,8 @@ class Square:
             val = self.position[0] if self.position[0] > self.position[1] \
                     else self.position[1]
             for i in range(self.size):
-                for j in range(self.size + val):
-                    if j < val:
+                for j in range(self.size + self.position[1]):
+                    if j < self.position[1]:
                         print(" ", end="")
                     else:
                         print("#", end="")
