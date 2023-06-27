@@ -101,7 +101,7 @@ class Square:
     """
     when call the name of object
     """
-     def __str__(self):
+    def __str__(self):
         if self.size == 0:
             return (f"\n")
         else:
@@ -112,7 +112,7 @@ class Square:
                     if j < self.position[0]:
                         assist += " "
                     else:
-                        ssist += "#"
+                        assist += "#"
                 result.append(assist)
             result = "\n".join(result)
             return (f"{result}")
