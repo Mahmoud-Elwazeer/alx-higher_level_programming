@@ -1,9 +1,8 @@
-#!/usr/bin/pyhton3
-# 0-square.py by Mahmoud Elwazeer
-"""Define Square"""
+#!/usr/bin/python3
+# 0-square.py by Elwazeer
+"""Defines a square """
 
 
 class Square:
-    """Empty Class"""
-
+    """Does nothing"""
     pass
