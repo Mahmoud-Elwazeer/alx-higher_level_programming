@@ -13,7 +13,7 @@ class Square:
         size: 0 default
         position: 0, 0 default
     """
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
 
@@ -72,7 +72,7 @@ class Square:
     def _check_tuple(self, value):
         flag = False
         if isinstance(value, tuple) and len(value) == 2:
-            if isinstance(value[0], int) and  isinstance(value[1], int):
+            if isinstance(value[0], int) and isinstance(value[1], int):
                 if value[0] >= 0 and value[1] >= 0:
                     flag = True
         return (flag)
