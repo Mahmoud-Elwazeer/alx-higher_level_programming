@@ -44,6 +44,5 @@ class Square:
     """
     calc area of square
     """
-    @property
     def area(self):
         return (self.size ** 2)

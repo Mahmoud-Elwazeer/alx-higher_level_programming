@@ -44,14 +44,12 @@ class Square:
     """
     calc area of square
     """
-    @property
     def area(self):
         return (self.size ** 2)
 
     """
     print area as shape
     """
-    @property
     def my_print(self):
         if self.size == 0:
             print()
