@@ -23,13 +23,7 @@ class Square:
     """
     @property
     def size(self):
-         if not isinstance(self._size, int):
-            raise TypeError("size must be an integer")
-        else:
-            if self._size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                return self._size
+        return self._size
 
     """
     Set value for size
