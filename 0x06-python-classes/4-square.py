@@ -41,7 +41,6 @@ class Square:
             else:
                 self._size = value
 
-
     """
     calc area of square
     """
