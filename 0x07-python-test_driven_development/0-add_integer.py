@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 
 """
-    Example:
-    >>> add_integer(100, 2)
-    102
+add integers
 """
 
 
 def add_integer(a, b=98):
     """
     add Two integer
+    Args:
+        a (int): 1st number
+        b (int): 2nd number
+    Returns:
+        a + b
     """
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
