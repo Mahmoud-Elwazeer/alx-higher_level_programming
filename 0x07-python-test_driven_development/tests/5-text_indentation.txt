@@ -2,8 +2,6 @@
 """
 Examples:
 
->>> import sys
->>> sys.path.append("../")
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("hello, my name is mahmoud. Thanks")
 hello, my name is mahmoud.
