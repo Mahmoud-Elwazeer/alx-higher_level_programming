@@ -1,0 +1,17 @@
+
+"""
+Examples:
+
+>>> import sys
+>>> sys.path.append("../")
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("hello, my name is mahmoud. Thanks")
+hello, my name is mahmoud.
+<BLANKLINE>
+Thanks
+>>> text_indentation(23)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+"""
