@@ -45,10 +45,10 @@ class Rectangle:
 
     def __str__(self):
         result = []
-        for i in range(height):
+        for i in range(self._height):
             r = ""
-            for j in range(width):
+            for j in range(self._width):
                 r += "#"
             result.append(r)
-            result = "\n".join(result)
-            return f"{result}"
+        result = "\n".join(result)
+        return f"{result}"
