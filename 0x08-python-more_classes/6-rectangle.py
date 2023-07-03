@@ -7,12 +7,12 @@ Define Rectangle
 class Rectangle:
     """ class Rectangle that defines a rectangle
     """
-    count = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        Rectangle.count += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -61,7 +61,4 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.count -= 1
-
-    def number_of_instances(self):
-        return Rectangle.count
+        Rectangle.number_of_instances -= 1
