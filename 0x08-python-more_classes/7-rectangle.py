@@ -50,9 +50,10 @@ class Rectangle:
     def __str__(self):
         result = []
         for i in range(self._height):
-            r = ""
+            r = []
             for j in range(self._width):
-                r += Rectangle.print_symbol
+                r.append(Rectangle.print_symbol)
+            r = "".join(r)
             result.append(r)
         result = "\n".join(result)
         return f"{result}"
