@@ -30,6 +30,9 @@ of integers/floats")
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
+    if div == float('inf'):
+        r = [[0] * len(matrix[0]) for _ in range(len(matrix))]
+        return r
 
     result = []
     for i in matrix:
