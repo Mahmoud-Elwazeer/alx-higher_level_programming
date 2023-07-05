@@ -13,6 +13,8 @@ def say_my_name(first_name, last_name=""):
         first_name: first name
         last_name: last_name
     """
+    if first_name is None:
+        raise TypeError("No Argument")
     if type(first_name) != str:
         raise TypeError("first_name must be a string")
     if type(last_name) != str:
