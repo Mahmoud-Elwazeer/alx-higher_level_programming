@@ -7,8 +7,12 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 filesave = "add_item.json"
+"""
 list_input = []
-save_to_json_file(list_input, filesave)
-list_input = load_from_json_file(filesave)
+save_to_json_file(list_input, filesave)"""
+try:
+    list_input = load_from_json_file(filesave)
+except:
+    list_input = []
 result = list_input + list(sys.argv[1:])
 save_to_json_file(result, filesave)
