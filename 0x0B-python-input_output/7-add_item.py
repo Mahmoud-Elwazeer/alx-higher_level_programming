@@ -12,7 +12,7 @@ list_input = []
 save_to_json_file(list_input, filesave)"""
 try:
     list_input = load_from_json_file(filesave)
-except:
+except Exception:
     list_input = []
 result = list_input + list(sys.argv[1:])
 save_to_json_file(result, filesave)
