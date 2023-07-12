@@ -9,6 +9,4 @@ def is_same_class(obj, a_class):
     """
     check is same calss
     """
-    if not isinstance(obj, a_class):
-        return (False)
-    return (True)
+    return (isinstance(obj, a_class))
