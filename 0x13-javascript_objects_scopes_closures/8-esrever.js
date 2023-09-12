@@ -1,4 +1,4 @@
-#!/usr/bin/code
+#!/usr/bin/node
 
 exports.esrever = function (list) {
   let out = [];
