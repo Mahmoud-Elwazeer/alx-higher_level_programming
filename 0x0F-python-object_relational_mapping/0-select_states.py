@@ -13,7 +13,7 @@ def main():
         database=sys.argv[3]
     )
 
-    cusrsor = dbconnect.cursor()
+    cursor = dbconnect.cursor()
 
     states = "SELECT * FROM states"
     
@@ -22,7 +22,6 @@ def main():
         readlist = cursor.fetchall()
         for i in readlist:
             print(i)
-            print(1)
     except:
         print("Error")
     finally:
