@@ -16,9 +16,9 @@ def main():
 
     cursor = dbconnect.cursor()
 
-    states = "SELECT * FROM states WHERE name = %s"
+    states = "SELECT * FROM states WHERE name = '{}'".format(sys.argv[4])
     try:
-        cursor.execute(states, (sys.argv[4],))
+        cursor.execute(states)
         readlist = cursor.fetchall()
         for i in readlist:
             print(i)
