@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-
+"""import library"""
 import sys
 import MySQLdb
 
 
 def main():
+    """ main function"""
     dbconnect = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -16,17 +17,15 @@ def main():
     cursor = dbconnect.cursor()
 
     states = "SELECT * FROM states"
-    
     try:
         cursor.execute(states)
         readlist = cursor.fetchall()
         for i in readlist:
             print(i)
-    except:
+    except Exception:
         print("Error")
     finally:
         dbconnect.close()
-
 
 
 if __name__ == '__main__':
