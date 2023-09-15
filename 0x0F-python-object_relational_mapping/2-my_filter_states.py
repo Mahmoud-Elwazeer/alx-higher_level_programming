@@ -23,7 +23,7 @@ def main():
         for i in readlist:
             print(i)
     except Exception:
-        print("Error")
+        pass
     finally:
         dbconnect.close()
 
