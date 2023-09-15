@@ -21,7 +21,8 @@ def main():
         cursor.execute(states)
         readlist = cursor.fetchall()
         for i in readlist:
-            print(i[1][0])
+            if (i[1][0] == 'N'):
+                print(i)
     except Exception:
         print("Error")
     finally:
