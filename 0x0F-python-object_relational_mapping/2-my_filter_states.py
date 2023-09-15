@@ -16,13 +16,12 @@ def main():
 
     cursor = dbconnect.cursor()
 
-    states = "SELECT * FROM states"
+    states = "SELECT * FROM states WHERE name = %s"
     try:
-        cursor.execute(states)
+        cursor.execute(states, (sys.argv[4],))
         readlist = cursor.fetchall()
         for i in readlist:
-            if (i[1] == sys.argv[4]):
-                print(i)
+            print(i)
     except Exception:
         print("Error")
     finally:
