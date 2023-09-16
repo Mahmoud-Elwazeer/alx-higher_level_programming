@@ -6,8 +6,8 @@ from sys import argv
 
 
 def main():
-    engine = create_engine('mysql://{}:{}@localhost/{}\
-            '.format(argv[1], argv[2], argv[3]))
+    engine = create_engine('mysql://{}:{}@localhost/{}'.format(
+        argv[1], argv[2], argv[3]))
     conn = engine.connect()
     out = conn.execute(text("SELECT * FROM states"))
     for i in out:
