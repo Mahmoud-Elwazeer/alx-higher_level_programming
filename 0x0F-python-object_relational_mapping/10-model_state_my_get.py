@@ -22,4 +22,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if len(argv) == 5:
+        main()
