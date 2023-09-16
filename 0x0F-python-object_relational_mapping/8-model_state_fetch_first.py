@@ -12,6 +12,7 @@ def main():
     out = conn.execute(text("SELECT * FROM states"))
     for i in out:
         print("{}: {}".format(i[0], i[1]))
+        break
 
 
 if __name__ == "__main__":
