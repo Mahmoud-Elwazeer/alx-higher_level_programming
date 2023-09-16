@@ -10,9 +10,9 @@ def main():
         argv[1], argv[2], argv[3]))
     conn = engine.connect()
     out = conn.execute(text("SELECT * FROM states WHERE name = :name"), name=argv[4])
-    row = out.fetchone()
+    row = out.fetchall()
     if row:
-        print(row[0])
+        print(row[0][0])
     else:
         print("Not found")
 
