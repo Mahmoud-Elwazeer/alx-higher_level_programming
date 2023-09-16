@@ -16,14 +16,18 @@ def main():
 
     cursor = dbconnect.cursor()
 
-    cities = "SELECT cities.name\
-                FROM cities, states \
-                WHERE states.name = %s"
+    cities = "SELECT cities.name, states.name\
+                FROM cities\
+                JOIN states ON cities.state_id = states.id"
     try:
-        cursor.execute(cities, (sys.argv[4],))
+        cursor.execute(cities)
         readlist = cursor.fetchall()
+        out = ""
         for i in readlist:
-            print(i)
+            if (i[1] == sys.argv[4]):
+                out += i[0] + ", "
+        out = out.rstrip(", ")
+        print(out)
     except Exception:
         print("Error")
     finally:
