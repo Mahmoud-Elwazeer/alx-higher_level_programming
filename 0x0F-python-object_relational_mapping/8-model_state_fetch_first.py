@@ -13,6 +13,8 @@ def main():
     first = out.fetchone()
     if first:
         print('{}: {}'.format(first[0], first[1]))
+    else:
+        print('Nothing')
 
 
 if __name__ == "__main__":
