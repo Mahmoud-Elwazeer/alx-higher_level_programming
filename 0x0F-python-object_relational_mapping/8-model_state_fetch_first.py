@@ -10,9 +10,9 @@ def main():
         argv[1], argv[2], argv[3]))
     conn = engine.connect()
     out = conn.execute(text("SELECT * FROM states"))
-    for i in out:
-        print("{}: {}".format(i[0], i[1]))
-        break
+    first = out.fetchone()
+    if first:
+        print('{}: {}'.format(first[0], first[1]))
 
 
 if __name__ == "__main__":
