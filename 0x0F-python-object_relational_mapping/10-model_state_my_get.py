@@ -9,11 +9,14 @@ def main():
     engine = create_engine('mysql://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]))
     conn = engine.connect()
-    out = conn.execute(text("SELECT * FROM states WHERE name = :name"), name=argv[4])
-    row = out.fetchall()
-    if row:
-        print(row[0][0])
-    else:
+    out = conn.execute(text("SELECT * FROM states"))
+    for row in out:
+        flag = 0
+        if row[1] == argv[4]:
+            print(row[0])
+            flag = 1
+
+    if flag == 0:
         print("Not found")
 
 
