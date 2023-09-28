@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
 """import libraries"""
 
 from model_city import Base, City
@@ -12,11 +11,6 @@ def main():
     engine = create_engine('mysql://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]))
     conn = engine.connect()
-<<<<<<< HEAD
-    out = conn.execute(text("SELECT * FROM cities"))
-    for i in out:
-        print(i)
-=======
     # Session = sessionmaker(bind=engine)
     # session = Session()
 
@@ -26,7 +20,6 @@ def main():
     out = conn.execute(text("SELECT * FROM states"))
     for i in out:
         print("{}: {}".format(i[0], i[1]))
->>>>>>> 8471a57e3477eda38ae4ca078b9a3a025bf16069
 
 
 if __name__ == "__main__":
