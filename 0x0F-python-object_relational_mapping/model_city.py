@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """import libraries"""
-from sqlalchemy import Column, String, Integer
-from model_state import Base, State
+from sqlalchemy import Column, String, Integer, ForeignKey
+from model_state import State, Base
 
 
 class City(Base):
