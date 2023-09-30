@@ -10,7 +10,7 @@ def main():
     add_email = sys.argv[2]
     req = urllib.request.Request(url)
     req.add_header('email', add_email)
-    
+
     with urllib.request.urlopen(req) as response:
         get_header = response.getheader('email')
         print(f"Your email is: {get_header}")
