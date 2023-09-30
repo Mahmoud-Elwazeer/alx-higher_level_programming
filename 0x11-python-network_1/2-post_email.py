@@ -9,10 +9,11 @@ def main():
     url = sys.argv[1]
     add_email = sys.argv[2]
     req = urllib.request.Request(url)
-
+    req.add_header('email', add_email)
+    
     with urllib.request.urlopen(req) as response:
-        req.add_header('email', add_email)
-        print(f"Your email is: {add_email}")
+        get_header = response.getheader('email')
+        print(f"Your email is: {get_header}")
 
 
 if __name__ == "__main__":
