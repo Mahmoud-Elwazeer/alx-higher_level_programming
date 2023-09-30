@@ -2,6 +2,7 @@
 """"import libraries"""
 import urllib.request
 
+
 def main():
     """main function"""
     url = "https://alx-intranet.hbtn.io/status"
@@ -13,6 +14,7 @@ def main():
         print(f"    - type: {type(content)}")
         print(f"    - content: {content}")
         print(f"    - utf8 content: {utf_content}")
+
 
 if __name__ == "__main__":
     main()
