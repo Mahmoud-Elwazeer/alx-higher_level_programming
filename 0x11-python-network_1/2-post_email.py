@@ -12,7 +12,7 @@ def main():
     req.add_header('email', add_email)
 
     with urllib.request.urlopen(req) as response:
-        get_header = response.getheader('email')
+        get_header = response.getheader('email').decode('utf-8')
         print(f"Your email is: {get_header}")
 
 
