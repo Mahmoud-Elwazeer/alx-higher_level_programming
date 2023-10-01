@@ -9,11 +9,11 @@ def main():
     """main function"""
     url = sys.argv[1]
     values = {'email': sys.argv[2]}
-    
+
     data = urllib.parse.urlencode(values)
-    data = data.encode('ascii')
-    
-    req = urllib.request.Request(url, data)
+    data = data.encode('utf-8')
+
+    req = urllib.request.Request(url, data, method='POST')
 
     with urllib.request.urlopen(req) as response:
         content = response.read().decode('utf-8')
