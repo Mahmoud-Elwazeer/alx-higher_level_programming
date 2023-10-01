@@ -13,9 +13,11 @@ def main():
         values = {'q': ""}
 
     req = requests.post(url, data=values)
-    json_response = req.json()
-
-    print(f"[{json_response['id']}] {json_response['name']}")
+    try:
+        json_response = req.json()
+        print(f"[{json_response['id']}] {json_response['name']}")
+    except Exception:
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
