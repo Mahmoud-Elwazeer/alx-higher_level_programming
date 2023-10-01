@@ -13,7 +13,7 @@ def main():
     data = urllib.parse.urlencode(values)
     data = data.encode('utf-8')
 
-    req = urllib.request.Request(url, data, method='POST')
+    req = urllib.request.Request(url, data)
 
     with urllib.request.urlopen(req) as response:
         content = response.read().decode('utf-8')
