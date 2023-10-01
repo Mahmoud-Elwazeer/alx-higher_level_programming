@@ -10,7 +10,7 @@ def main():
     if len(sys.argv) == 2:
         values = {'q': sys.argv[1]}
 
-            req = requests.post(url, data=values)
+        req = requests.post(url, data=values)
         try:
             json_response = req.json()
             print(f"[{json_response['id']}] {json_response['name']}")
