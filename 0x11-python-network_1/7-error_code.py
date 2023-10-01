@@ -7,10 +7,15 @@ import sys
 def main():
     """main function"""
     url = sys.argv[1]
-    response = requests.get(url)
-    get_header = response.headers.get('X-Request-Id')
+    try:
+        response = requests.get(url)
+        code = response.status_code
+        response.raise_for_status()
+        content = response.content.decode('utf-8')
+        print(content)
 
-    print(get_header)
+    except requests.exceptions.HTTPError as e:
+        print(f"Error code: {code}")
 
 
 if __name__ == "__main__":
