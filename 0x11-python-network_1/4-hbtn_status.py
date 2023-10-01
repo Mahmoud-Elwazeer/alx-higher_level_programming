@@ -6,15 +6,11 @@ import requests
 def main():
     """main function"""
     url = "https://alx-intranet.hbtn.io/status"
-    req = urllib.request.Request(url)
+    response  = requests.get(url)
 
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-        utf_content = content.decode('utf-8')
-        print("Body response:")
-        print(f"\t- type: {type(content)}")
-        print(f"\t- content: {content}")
-        print(f"\t- utf8 content: {utf_content}")
+    print("Body response:")
+    print(f"\t- type: {type(response.content)}")
+    print(f"\t- utf8 content: {response.content.decode('utf-8')}")
 
 
 if __name__ == "__main__":
