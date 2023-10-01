@@ -6,7 +6,7 @@ import sys
 
 def main():
     """main func"""
-    url = "https://alx-intranet.hbtn.io/status"
+    url = "http://0.0.0.0:5000/search_user"
     if len(sys.argv) == 2:
         values = {'q': sys.argv[1]}
     else:
@@ -15,7 +15,7 @@ def main():
     req = requests.post(url, data=values)
     json_response = req.json()
 
-    print(f"[{json_response["id"]}] {json_response["name"]}")
+    print(f"[{json_response['id']}] {json_response['name']}")
 
 
 if __name__ == "__main__":
