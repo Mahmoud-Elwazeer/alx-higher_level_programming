@@ -8,7 +8,7 @@ def main():
     """main function"""
     url = sys.argv[1]
     response = requests.get(url)
-    get_header = response.headers['X-Request-Id']
+    get_header = response.headers.get('X-Request-Id')
 
     print(get_header)
 
