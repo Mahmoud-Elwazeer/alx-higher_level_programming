@@ -8,7 +8,7 @@ const request = require('request');
 const url = args[2];
 const characterId = '18';
 
-let count = 0
+let count = 0;
 
 request(url, function (err, response, body) {
   if (err) {
@@ -18,9 +18,9 @@ request(url, function (err, response, body) {
   data.results.forEach((film) => {
     film.characters.forEach((charchter) => {
       if (charchter.includes(characterId)) {
-        count += 1
+        count += 1;
       }
-    })
+    });
   });
   console.log(count);
 });
