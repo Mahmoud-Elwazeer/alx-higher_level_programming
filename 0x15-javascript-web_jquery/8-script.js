@@ -1,4 +1,5 @@
 
+const $ = window.$;
 $content = $('#list_movies');
 
 $(function () {

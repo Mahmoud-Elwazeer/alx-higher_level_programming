@@ -4,6 +4,8 @@
 //     // console.log(data)
 // })
 
+// for style
+const $ = window.$;
 const $content = $('#character');
 
 $(function () {
